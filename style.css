@@ -1,4 +1,9 @@
 body {
+  background-image: url(./background.jpg);
+  background-size: cover;
+}
+
+main {
   margin: 0 auto;
   margin-top: 50px;
   display: grid;
@@ -6,9 +11,28 @@ body {
   height: 600px;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
-  border: 10px solid red;
-  background-image: url(./background.jpg);
-  background-size: cover;
+  border: 20px solid rgb(224, 104, 18);
+}
+
+/* To position A B C ... G H on top & 
+   1 2 3 ... 8 left and right* */
+.row-odd div,
+.row-even div {
+  position: relative;
+}
+
+/* To position A B C ... G H on top */
+.position-top {
+  color: white;
+  position: absolute;
+  top: -35px;
+}
+
+/* To position A B C ... G H on bottom */
+.position-bottom {
+  color: white;
+  position: absolute;
+  bottom: -35px;
 }
 
 .row-even,
@@ -28,9 +52,46 @@ body {
   background-color: white;
 }
 
+/* To position 1 2 3 ... 8 left */
+.row-even div:first-child p:first-child,
+.row-odd div:first-child p:first-child {
+  position: absolute;
+  color: white;
+  left: -14px;
+}
+
+/* To position 1 2 3 ... 8 left */
+.row-even div:last-child p:last-child,
+.row-odd div:last-child p:last-child {
+  position: absolute;
+  color: white;
+  right: -14px;
+}
+
 .row-even div,
 .row-odd div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+img {
+  width: 100%;
+}
+
+/* Note:
+  + transition: property duration effect delay
+
+*/
+
+/* .rook_black {
+  transition: transform 3s ease-in 3s;
+  transform: translateY(200%);
+}
+
+.knight_black {
+  transition: transform 6s ease-out;
+  transform: translateY(200%);
+  transition: transofrm 0.5s ease-out;
+  transform: translateX(100%);
+} */
