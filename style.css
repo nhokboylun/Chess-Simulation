@@ -8,14 +8,84 @@ body {
 }
 
 header {
-  color: white;
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
+  animation: headerMove 10s forwards;
+  font-size: 30px;
+  background-color: rgba(255, 255, 255, 0.97);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes headerMove {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+header p:last-child {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.number_1 {
+  animation: countdown1 1s forwards 5s;
+  opacity: 0;
+}
+
+@keyframes countdown1 {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.number_2 {
+  animation: countdown2 1s forwards 4s;
+  opacity: 0;
+}
+
+@keyframes countdown2 {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.number_3 {
+  animation: countdown3 1s forwards 3s;
+  opacity: 0;
+}
+
+@keyframes countdown3 {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 main {
   margin: 0 auto;
+  margin-top: 50px;
   display: grid;
   width: 600px;
   height: 600px;
@@ -102,7 +172,7 @@ img {
 /* Black Move */
 
 .pawn_black_2 {
-  animation: pawnBlack2Move 100s forwards 42s;
+  animation: pawnBlack2Move 100s forwards 52s;
 }
 
 @keyframes pawnBlack2Move {
@@ -121,7 +191,7 @@ img {
 }
 
 .pawn_black_4 {
-  animation: pawnBlack4Move 2s forwards 82s;
+  animation: pawnBlack4Move 2s forwards 92s;
 }
 
 @keyframes pawnBlack4Move {
@@ -131,7 +201,7 @@ img {
 }
 
 .pawn_black_5 {
-  animation: pawnBlack5Move 100s forwards 2s;
+  animation: pawnBlack5Move 100s forwards 12s;
 }
 
 @keyframes pawnBlack5Move {
@@ -169,7 +239,7 @@ img {
 }
 
 .pawn_black_7 {
-  animation: pawnBlack7Move 100s forwards 68s;
+  animation: pawnBlack7Move 100s forwards 78s;
 }
 
 @keyframes pawnBlack7Move {
@@ -188,7 +258,7 @@ img {
 }
 
 .rook_black_left {
-  animation: rookBlackLeftMove 100s forwards 48s;
+  animation: rookBlackLeftMove 100s forwards 88s;
 }
 
 @keyframes rookBlackLeftMove {
@@ -201,7 +271,7 @@ img {
 }
 
 .rook_black_right {
-  animation: rookBlackRightMove 100s forwards 72s;
+  animation: rookBlackRightMove 100s forwards 82s;
 }
 
 @keyframes rookBlackRightMove {
@@ -214,7 +284,7 @@ img {
 }
 
 .king_black {
-  animation: kingBlackMove 100s forwards 84s;
+  animation: kingBlackMove 100s forwards 94s;
 }
 
 @keyframes kingBlackMove {
@@ -239,7 +309,7 @@ img {
 }
 
 .queen_black {
-  animation: queenBlackMove 100s forwards 30s;
+  animation: queenBlackMove 100s forwards 40s;
 }
 
 @keyframes queenBlackMove {
@@ -276,7 +346,7 @@ img {
 }
 
 .knight_black_right {
-  animation: knightBlackRightMove 100s forwards 38s;
+  animation: knightBlackRightMove 100s forwards 48s;
 }
 
 @keyframes knightBlackRightMove {
@@ -295,7 +365,7 @@ img {
 }
 
 .bishop_black_right {
-  animation: bishopBlackRightMove 100s forwards 10s;
+  animation: bishopBlackRightMove 100s forwards 20s;
 }
 
 @keyframes bishopBlackRightMove {
@@ -333,7 +403,7 @@ img {
 }
 
 .bishop_black_left {
-  animation: bishopBlackLeftMove 100s forwards 56s;
+  animation: bishopBlackLeftMove 100s forwards 66s;
 }
 
 @keyframes bishopBlackLeftMove {
@@ -347,7 +417,7 @@ img {
 }
 
 .knight_black_left {
-  animation: knightBlackLeftMove 100s forwards 6s;
+  animation: knightBlackLeftMove 100s forwards 16s;
 }
 
 @keyframes knightBlackLeftMove {
@@ -374,7 +444,7 @@ img {
 /* White Move */
 
 .pawn_white_2 {
-  animation: pawnWhite2Move 100s forwards 12s;
+  animation: pawnWhite2Move 100s forwards 22s;
 }
 
 @keyframes pawnWhite2Move {
@@ -396,7 +466,7 @@ img {
 }
 
 .pawn_white_3 {
-  animation: pawnWhite3Move 100s forwards 16s;
+  animation: pawnWhite3Move 100s forwards 26s;
 }
 
 @keyframes pawnWhite3Move {
@@ -409,7 +479,7 @@ img {
 }
 
 .pawn_white_4 {
-  animation: pawnWhite4Move 100s forwards 18s;
+  animation: pawnWhite4Move 100s forwards 28s;
 }
 
 @keyframes pawnWhite4Move {
@@ -431,7 +501,7 @@ img {
 }
 
 .pawn_white_5 {
-  animation: pawnWhite5Move 100s forwards;
+  animation: pawnWhite5Move 100s forwards 10s;
 }
 
 @keyframes pawnWhite5Move {
@@ -456,7 +526,7 @@ img {
 }
 
 .bishop_white_right {
-  animation: bishopWhiteRightMove 100s forwards 8s;
+  animation: bishopWhiteRightMove 100s forwards 18s;
 }
 
 @keyframes bishopWhiteRightMove {
@@ -487,7 +557,7 @@ img {
 }
 
 .knight_white_right {
-  animation: knightWhiteRightMove 100s forwards 4s;
+  animation: knightWhiteRightMove 100s forwards 14s;
 }
 
 @keyframes knightWhiteRightMove {
@@ -506,7 +576,7 @@ img {
 }
 
 .knight_white_left {
-  animation: knightWhiteLeftMove 100s forwards 54s;
+  animation: knightWhiteLeftMove 100s forwards 64s;
 }
 
 @keyframes knightWhiteLeftMove {
@@ -534,7 +604,7 @@ img {
 }
 
 .king_white {
-  animation: kingWhiteMove 100s forwards 24s;
+  animation: kingWhiteMove 100s forwards 34s;
 }
 
 @keyframes kingWhiteMove {
@@ -547,7 +617,7 @@ img {
 }
 
 .queen_white {
-  animation: queenWhiteMove 100s forwards 28s;
+  animation: queenWhiteMove 100s forwards 38s;
 }
 
 @keyframes queenWhiteMove {
@@ -581,7 +651,7 @@ img {
 }
 
 .rook_white_right {
-  animation: rookWhiteRightMove 100s forwards 24s;
+  animation: rookWhiteRightMove 100s forwards 34s;
 }
 
 @keyframes rookWhiteRightMove {
@@ -609,7 +679,7 @@ img {
 }
 
 .rook_white_left {
-  animation: rookWhiteLeftMove 100s forwards 74s;
+  animation: rookWhiteLeftMove 100s forwards 84s;
 }
 
 @keyframes rookWhiteLeftMove {
@@ -622,7 +692,7 @@ img {
 }
 
 .bishop_white_left {
-  animation: bishopWhiteLeftMove 100s forwards 40s;
+  animation: bishopWhiteLeftMove 100s forwards 50s;
 }
 
 @keyframes bishopWhiteLeftMove {
