@@ -30,7 +30,12 @@ header {
   60% {
     opacity: 1;
   }
+  99% {
+    opacity: 0;
+    z-index: 2;
+  }
   100% {
+    z-index: -1;
     opacity: 0;
   }
 }
@@ -162,6 +167,11 @@ main {
 img {
   width: 100%;
   z-index: 1;
+  transition: transform 1s;
+}
+
+img:hover {
+  transform: rotate(720deg);
 }
 
 /* Note:
